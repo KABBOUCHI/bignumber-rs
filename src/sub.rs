@@ -7,7 +7,7 @@ impl Sub for BigNumber {
 
     fn sub(self, rhs: Self) -> Self::Output {
         BigNumber {
-            value: self.value.sub(rhs.value)
+            value: self.value.sub(rhs.value),
         }
     }
 }
@@ -21,16 +21,13 @@ mod tests {
 
     #[test]
     fn test_a() {
-        assert_eq!(
-            to_bn_safe!("1").sub(to_bn_safe!("3")).to_string(), 
-            "-2"
-        );
+        assert_eq!(to_bn_safe!("1").sub(to_bn_safe!("3")).to_string(), "-2");
     }
 
     #[test]
     fn test_b() {
         assert_eq!(
-            to_bn_safe!("0.3").sub(to_bn_safe!("0.2")).to_string(), 
+            to_bn_safe!("0.3").sub(to_bn_safe!("0.2")).to_string(),
             "0.1"
         );
     }

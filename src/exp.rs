@@ -1,4 +1,4 @@
-use crate::{bignumber::BigNumber};
+use crate::bignumber::BigNumber;
 
 impl BigNumber {
     pub fn pow(&self, exp: &BigNumber) -> BigNumber {
@@ -20,9 +20,6 @@ mod tests {
 
     #[test]
     fn test_powi() {
-        assert_eq!(
-            to_bn_safe!("2").powi(12).to_string(),
-            "4096", 
-        );
+        assert_eq!(to_bn_safe!("2").powi(12).to_string(), "4096",);
     }
 }

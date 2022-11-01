@@ -7,7 +7,7 @@ impl Add for BigNumber {
 
     fn add(self, rhs: Self) -> Self::Output {
         BigNumber {
-            value: self.value.add(rhs.value)
+            value: self.value.add(rhs.value),
         }
     }
 }
@@ -21,16 +21,13 @@ mod tests {
 
     #[test]
     fn test_a() {
-        assert_eq!(
-            to_bn_safe!("1").add(to_bn_safe!("3")).to_string(), 
-            "4"
-        );
+        assert_eq!(to_bn_safe!("1").add(to_bn_safe!("3")).to_string(), "4");
     }
 
     #[test]
     fn test_b() {
         assert_eq!(
-            to_bn_safe!("0.1").add(to_bn_safe!("0.2")).to_string(), 
+            to_bn_safe!("0.1").add(to_bn_safe!("0.2")).to_string(),
             "0.3"
         );
     }

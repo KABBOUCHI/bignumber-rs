@@ -21,9 +21,6 @@ mod tests {
 
     #[test]
     fn test_div() {
-        assert_eq!(
-            to_bn_safe!("2").mul(to_bn_safe!("3")).to_string(), 
-            "6"
-        );
+        assert_eq!(to_bn_safe!("2").mul(to_bn_safe!("3")).to_string(), "6");
     }
 }

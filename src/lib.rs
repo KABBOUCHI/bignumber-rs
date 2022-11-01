@@ -1,12 +1,13 @@
+mod add;
 mod bignumber;
 mod convert;
-mod errors;
-mod fmt;
-mod sub;
-mod add;
-mod mul;
 mod div;
+mod errors;
+mod ethereum_types;
 mod exp;
+mod fmt;
 mod macros;
+mod mul;
+mod sub;
 
 pub type BigNumber = bignumber::BigNumber;

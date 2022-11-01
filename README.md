@@ -25,6 +25,8 @@ fn main() -> Result<(), BigNumberError> {
     println!("{}", c);
     println!("{} ETH", BigNumber::of("44700000000000000")?.div(&d));
 
+    println!("{}", BigNumber::from(ethereum_types::U256::max_value()));
+
     Ok(())
 }
 ```
