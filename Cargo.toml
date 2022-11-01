@@ -1,0 +1,16 @@
+[package]
+name = "bignumber"
+authors = ["Georges KABBOUCHI <georges.kabbouchi@gmail.com>"]
+version = "0.0.1"
+edition = "2021"
+description = "A Rust library for arbitrary-precision decimal and non-decimal arithmetic"
+keywords = ["bignumber", "mathematics", "numerics", "decimal", "arbitrary-precision"]
+categories = ["mathematics", "no-std"]
+license = "MIT"
+repository = "https://github.com/KABBOUCHI/bignumber-rs"
+homepage = "https://github.com/KABBOUCHI/bignumber-rs"
+documentation = "https://docs.rs/bignumber"
+rust-version = "1.61"
+
+[dependencies]
+dashu-float = "0.2.1"
