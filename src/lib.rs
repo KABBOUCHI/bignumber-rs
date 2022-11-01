@@ -1,9 +1,10 @@
 mod bignumber;
 mod convert;
-mod error;
+mod errors;
 mod fmt;
 mod sub;
 mod add;
+mod mul;
 mod div;
 mod exp;
 mod macros;
