@@ -7,7 +7,7 @@ impl Div for BigNumber {
 
     fn div(self, rhs: Self) -> Self::Output {
         BigNumber {
-            value: self.value.div(&rhs.value),
+            value: self.value.div(rhs.value),
         }
     }
 }

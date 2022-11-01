@@ -6,12 +6,3 @@ impl From<usize> for BigNumber {
         BigNumber::of(n.to_string().as_str()).unwrap()
     }
 }
-
-impl Clone for BigNumber {
-    #[inline]
-    fn clone(&self) -> Self {
-        Self {
-            value: self.value.clone(),
-        }
-    }
-}

@@ -3,6 +3,16 @@ use crate::BigNumberError;
 pub struct BigNumber {
     pub value: dashu_float::DBig,
 }
+// impl Copy for BigNumber {}
+
+impl Clone for BigNumber {
+    #[inline]
+    fn clone(&self) -> Self {
+        Self {
+            value: self.value.clone(),
+        }
+    }
+}
 
 impl BigNumber {
     pub fn of(val: &str) -> Result<BigNumber, BigNumberError> {

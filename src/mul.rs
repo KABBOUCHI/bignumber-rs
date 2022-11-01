@@ -7,7 +7,7 @@ impl Mul for BigNumber {
 
     fn mul(self, rhs: Self) -> Self::Output {
         BigNumber {
-            value: self.value.mul(&rhs.value),
+            value: self.value.mul(rhs.value),
         }
     }
 }
