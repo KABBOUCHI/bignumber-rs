@@ -12,6 +12,16 @@ impl Div for BigNumber {
     }
 }
 
+impl Div for &BigNumber {
+    type Output = BigNumber;
+
+    fn div(self, rhs: Self) -> Self::Output {
+        BigNumber {
+            value: self.value.clone().div(rhs.value.clone()),
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use crate::to_bn_safe;

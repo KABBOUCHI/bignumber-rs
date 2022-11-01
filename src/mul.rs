@@ -12,6 +12,16 @@ impl Mul for BigNumber {
     }
 }
 
+impl Mul for &BigNumber {
+    type Output = BigNumber;
+
+    fn mul(self, rhs: Self) -> Self::Output {
+        BigNumber {
+            value: self.value.clone().mul(rhs.value.clone()),
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use crate::to_bn_safe;

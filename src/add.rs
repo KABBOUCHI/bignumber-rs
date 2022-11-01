@@ -12,6 +12,16 @@ impl Add for BigNumber {
     }
 }
 
+impl Add for &BigNumber {
+    type Output = BigNumber;
+
+    fn add(self, rhs: Self) -> Self::Output {
+        BigNumber {
+            value: self.value.clone().add(rhs.value.clone()),
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use crate::to_bn_safe;

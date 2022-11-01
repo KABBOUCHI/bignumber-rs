@@ -128,7 +128,7 @@ checksum = "2dabbe35f96fb9507f7330793dc490461b2962659ac5d427181e451a623751d1"
 
 [[package]]
 name = "bignumber"
-version = "0.0.10"
+version = "0.0.11"
 dependencies = [
  "dashu-float",
  "ethereum-types 0.14.0",
