@@ -1,5 +1,13 @@
 use crate::BigNumberError;
 
+const DEFAULT_PRECISION: usize = if cfg!(feature = "precision-1024") {
+    1024
+} else if cfg!(feature = "precision-512") {
+    512
+} else {
+    256
+};
+
 pub struct BigNumber {
     pub value: dashu_float::DBig,
 }
@@ -19,7 +27,7 @@ impl BigNumber {
 
         match value {
             Ok(x) => Ok(BigNumber {
-                value: x.with_precision(512).value(),
+                value: x.with_precision(DEFAULT_PRECISION).value(),
             }),
             Err(_) => Err(BigNumberError::InvalidDigit),
         }

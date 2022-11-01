@@ -23,3 +23,6 @@ serde = "1.0.147"
 [features]
 default = []
 ethers = ["dep:ethers"]
+precision-256 = []
+precision-512 = []
+precision-1024 = []
