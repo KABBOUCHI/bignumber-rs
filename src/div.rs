@@ -5,9 +5,19 @@ use crate::BigNumber;
 impl Div for BigNumber {
     type Output = BigNumber;
 
-    fn div(self, rhs: Self) -> Self::Output {
+    fn div(self, rhs: BigNumber) -> Self::Output {
         BigNumber {
             value: self.value.div(rhs.value),
+        }
+    }
+}
+
+impl Div<&BigNumber> for BigNumber {
+    type Output = BigNumber;
+
+    fn div(self, rhs: &BigNumber) -> Self::Output {
+        BigNumber {
+            value: self.value.div(rhs.value.clone()),
         }
     }
 }
@@ -15,9 +25,19 @@ impl Div for BigNumber {
 impl Div for &BigNumber {
     type Output = BigNumber;
 
-    fn div(self, rhs: Self) -> Self::Output {
+    fn div(self, rhs: &BigNumber) -> Self::Output {
         BigNumber {
             value: self.value.clone().div(rhs.value.clone()),
+        }
+    }
+}
+
+impl Div<BigNumber> for &BigNumber {
+    type Output = BigNumber;
+
+    fn div(self, rhs: BigNumber) -> Self::Output {
+        BigNumber {
+            value: self.value.clone().div(rhs.value),
         }
     }
 }

@@ -5,9 +5,19 @@ use crate::BigNumber;
 impl Add for BigNumber {
     type Output = BigNumber;
 
-    fn add(self, rhs: Self) -> Self::Output {
+    fn add(self, rhs: BigNumber) -> Self::Output {
         BigNumber {
             value: self.value.add(rhs.value),
+        }
+    }
+}
+
+impl Add<&BigNumber> for BigNumber {
+    type Output = BigNumber;
+
+    fn add(self, rhs: &BigNumber) -> Self::Output {
+        BigNumber {
+            value: self.value.add(rhs.value.clone()),
         }
     }
 }
@@ -15,9 +25,19 @@ impl Add for BigNumber {
 impl Add for &BigNumber {
     type Output = BigNumber;
 
-    fn add(self, rhs: Self) -> Self::Output {
+    fn add(self, rhs: &BigNumber) -> Self::Output {
         BigNumber {
             value: self.value.clone().add(rhs.value.clone()),
+        }
+    }
+}
+
+impl Add<BigNumber> for &BigNumber {
+    type Output = BigNumber;
+
+    fn add(self, rhs: BigNumber) -> Self::Output {
+        BigNumber {
+            value: self.value.clone().add(rhs.value),
         }
     }
 }

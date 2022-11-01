@@ -5,9 +5,39 @@ use crate::BigNumber;
 impl Sub for BigNumber {
     type Output = BigNumber;
 
-    fn sub(self, rhs: Self) -> Self::Output {
+    fn sub(self, rhs: BigNumber) -> Self::Output {
         BigNumber {
             value: self.value.sub(rhs.value),
+        }
+    }
+}
+
+impl Sub<&BigNumber> for BigNumber {
+    type Output = BigNumber;
+
+    fn sub(self, rhs: &BigNumber) -> Self::Output {
+        BigNumber {
+            value: self.value.sub(rhs.value.clone()),
+        }
+    }
+}
+
+impl Sub for &BigNumber {
+    type Output = BigNumber;
+
+    fn sub(self, rhs: &BigNumber) -> Self::Output {
+        BigNumber {
+            value: self.value.clone().sub(rhs.value.clone()),
+        }
+    }
+}
+
+impl Sub<BigNumber> for &BigNumber {
+    type Output = BigNumber;
+
+    fn sub(self, rhs: BigNumber) -> Self::Output {
+        BigNumber {
+            value: self.value.clone().sub(rhs.value),
         }
     }
 }
