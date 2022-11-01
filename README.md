@@ -1,4 +1,4 @@
-# bignumber
+# [WIP] bignumber
 
 A Rust library for arbitrary-precision decimal and non-decimal arithmetic
 
