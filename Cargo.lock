@@ -4,7 +4,7 @@ version = 3
 
 [[package]]
 name = "bignumber"
-version = "0.0.6"
+version = "0.0.7"
 dependencies = [
  "dashu-float",
  "ethereum-types",

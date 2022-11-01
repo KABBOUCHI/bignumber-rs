@@ -1,3 +1,4 @@
+#![doc = include_str!("../README.md")]
 mod add;
 mod bignumber;
 mod convert;
