@@ -23,7 +23,7 @@ fn main() -> Result<(), BigNumberError> {
     println!("{}", a);
     println!("{}", b);
     println!("{}", c);
-    println!("{} ETH", BigNumber::from("44700000000000000")?.div(&d));
+    println!("{} ETH", BigNumber::of("44700000000000000")?.div(&d));
 
     Ok(())
 }
