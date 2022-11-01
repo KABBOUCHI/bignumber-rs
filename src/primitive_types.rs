@@ -1,5 +1,5 @@
 use crate::BigNumber;
-use ethereum_types::{U128, U256, U512};
+use primitive_types::{U128, U256, U512};
 
 impl From<U128> for BigNumber {
     #[inline]

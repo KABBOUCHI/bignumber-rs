@@ -1,7 +1,7 @@
 [package]
 name = "bignumber"
 authors = ["Georges KABBOUCHI <georges.kabbouchi@gmail.com>"]
-version = "0.0.8"
+version = "0.0.9"
 edition = "2021"
 description = "A Rust library for arbitrary-precision decimal and non-decimal arithmetic"
 keywords = ["bignumber", "mathematics", "numerics", "decimal", "arbitrary-precision"]
@@ -15,4 +15,4 @@ rust-version = "1.61"
 
 [dependencies]
 dashu-float = "0.2.1"
-ethereum-types = { version = "0.13.1", default-features = false }
+primitive-types = "0.12.1"

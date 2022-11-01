@@ -3,11 +3,11 @@ mod add;
 mod bignumber;
 mod convert;
 mod div;
-mod ethereum_types;
 mod exp;
 mod fmt;
 mod macros;
 mod mul;
+mod primitive_types;
 mod sub;
 
 pub type BigNumber = bignumber::BigNumber;
