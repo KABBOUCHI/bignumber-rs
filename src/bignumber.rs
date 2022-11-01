@@ -1,4 +1,4 @@
-use crate::errors::BigNumberError;
+use crate::BigNumberError;
 
 pub struct BigNumber {
     pub value: dashu_float::DBig,
