@@ -9,6 +9,21 @@ impl From<usize> for BigNumber {
     }
 }
 
+impl From<f32> for BigNumber {
+    #[inline]
+    fn from(n: f32) -> Self {
+        BigNumber::of(n.to_string().as_str()).unwrap()
+    }
+}
+
+impl From<f64> for BigNumber {
+    #[inline]
+    fn from(n: f64) -> Self {
+        BigNumber::of(n.to_string().as_str()).unwrap()
+    }
+}
+
+
 impl FromStr for BigNumber {
     type Err = BigNumberError;
 
