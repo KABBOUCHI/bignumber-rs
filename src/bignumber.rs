@@ -46,4 +46,10 @@ impl BigNumber {
     pub fn is_zero(&self) -> bool {
         self.value.repr().is_zero()
     }
+
+    pub fn to_precision(&self, precision: usize) -> BigNumber {
+        BigNumber {
+            value: self.value.clone().with_precision(precision).value(),
+        }
+    }
 }
