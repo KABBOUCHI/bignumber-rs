@@ -42,4 +42,8 @@ impl BigNumber {
             Err(_) => Err(BigNumberError::ParseError),
         }
     }
+
+    pub fn is_zero(&self) -> bool {
+        self.value.repr().is_zero()
+    }
 }
