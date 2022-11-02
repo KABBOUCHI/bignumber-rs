@@ -17,5 +17,13 @@ pub type BigNumber = bignumber::BigNumber;
 
 #[derive(Debug)]
 pub enum BigNumberError {
-    InvalidDigit,
+    ParseError,
+}
+
+impl std::fmt::Display for BigNumberError {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        match *self {
+            BigNumberError::ParseError => "failed to parse".fmt(f),
+        }
+    }
 }

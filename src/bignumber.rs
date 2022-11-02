@@ -29,7 +29,7 @@ impl BigNumber {
             Ok(x) => Ok(BigNumber {
                 value: x.with_precision(DEFAULT_PRECISION).value(),
             }),
-            Err(_) => Err(BigNumberError::InvalidDigit),
+            Err(_) => Err(BigNumberError::ParseError),
         }
     }
 
@@ -39,7 +39,7 @@ impl BigNumber {
             Ok(x) => Ok(BigNumber {
                 value: x.with_precision(precision).value(),
             }),
-            Err(_) => Err(BigNumberError::InvalidDigit),
+            Err(_) => Err(BigNumberError::ParseError),
         }
     }
 }
