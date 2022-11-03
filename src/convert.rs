@@ -23,7 +23,6 @@ impl From<f64> for BigNumber {
     }
 }
 
-
 impl FromStr for BigNumber {
     type Err = BigNumberError;
 
