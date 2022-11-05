@@ -20,6 +20,8 @@ pub enum BigNumberError {
     ParseError,
 }
 
+impl std::error::Error for BigNumberError {}
+
 impl std::fmt::Display for BigNumberError {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         match *self {

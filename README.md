@@ -7,9 +7,9 @@ A Rust library for arbitrary-precision decimal and non-decimal arithmetic built 
 ```sh
 cargo add bignumber
 
-cargo add bignumber --features ethers
+cargo add bignumber -F ethers
 
-cargo add bignumber --features ethers precision-512
+cargo add bignumber -F ethers -F precision-512
 ```
 
 ## Usage
