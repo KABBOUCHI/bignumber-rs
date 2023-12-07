@@ -3,8 +3,6 @@ mod add;
 mod bignumber;
 mod convert;
 mod div;
-#[cfg(feature = "ethers")]
-mod ethers_types;
 mod exp;
 mod fmt;
 mod macros;
